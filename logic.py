@@ -68,7 +68,7 @@ class SpreadsheetAPI:
         :param range_: диапазон значений (Примеры: "А1", "А1:В4")
         :return:
         """
-        self.service.spreadsheets().values().clear(spreadsheetId=self.spreadsheet_id, range=range_)
+        self.service.spreadsheets().values().clear(spreadsheetId=self.spreadsheet_id, range=range_).execute()
 
     def full_clear(self):
         """
